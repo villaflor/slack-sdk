@@ -1,0 +1,19 @@
+{
+    "name": "villaflor/sebastian-slack-butler",
+    "description": "Sebastian is a butler who takes commands via slack message.",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Villaflor\\SebastianSlackButler\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Mark Anthony M. Villaflor",
+            "email": "villaflor@live.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {}
+}
