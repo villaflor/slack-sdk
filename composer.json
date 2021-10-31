@@ -5,7 +5,7 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Villaflor\\SebastianSlackButler\\": "src/"
+            "Villaflor\\Sebastian\\": "src/"
         }
     },
     "authors": [
