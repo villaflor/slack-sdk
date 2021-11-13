@@ -8,12 +8,32 @@
             "Villaflor\\Sebastian\\": "src/"
         }
     },
+    "autoload-dev": {
+        "psr-4": {
+            "Villaflor\\Sebastian\\Tests\\": "tests"
+        }
+    },
     "authors": [
         {
             "name": "Mark Anthony M. Villaflor",
             "email": "villaflor@live.com"
         }
     ],
-    "minimum-stability": "stable",
-    "require": {}
+    "minimum-stability": "dev",
+    "require": {
+        "php": "^7.4|^8.0",
+        "villaflor/connection": "^1.0",
+      "ext-json": "*"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^3.2",
+        "phpmd/phpmd": "^2.10",
+        "phpunit/phpunit": "^9.5",
+        "roave/security-advisories": "dev-latest"
+    },
+    "config": {
+        "preferred-install": "dist",
+        "sort-packages": true,
+        "optimize-autoloader": true
+    }
 }
