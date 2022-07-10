@@ -21,13 +21,13 @@
     ],
     "minimum-stability": "dev",
     "require": {
-        "php": "^7.4|^8.0",
-        "villaflor/connection": "^1.0",
-      "ext-json": "*"
+        "php": "^8.0|^8.1",
+        "villaflor/connection": "^1.2",
+        "ext-json": "*"
     },
     "require-dev": {
-        "friendsofphp/php-cs-fixer": "^3.2",
-        "phpmd/phpmd": "^2.10",
+        "friendsofphp/php-cs-fixer": "^3.8",
+        "phpmd/phpmd": "^2.12",
         "phpunit/phpunit": "^9.5",
         "roave/security-advisories": "dev-latest"
     },

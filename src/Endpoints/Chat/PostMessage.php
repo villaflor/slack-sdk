@@ -1,14 +1,15 @@
 <?php
 
-namespace Villaflor\Sebastian\Endpoints;
+namespace Villaflor\Sebastian\Endpoints\Chat;
 
 use stdClass;
 use Villaflor\Connection\Adapter\AdapterInterface;
 use Villaflor\Connection\APIInterface;
+use Villaflor\Connection\ConfigurationsInterface;
 use Villaflor\Connection\Traits\BodyAccessorTrait;
 use Villaflor\Sebastian\Definitions\URI;
 
-class Chat implements APIInterface
+class PostMessage implements APIInterface
 {
     use BodyAccessorTrait;
 
@@ -19,14 +20,9 @@ class Chat implements APIInterface
         $this->adapter = $adapter;
     }
 
-    public function postMessage(string $channel, string $message): stdClass
+    public function execute(ConfigurationsInterface $configurations): stdClass
     {
-        $payload = [
-            'channel' => $channel,
-            'text' => $message
-        ];
-
-        $response = $this->adapter->post(URI::CHAT_POST_MESSAGE, $payload);
+        $response = $this->adapter->post(URI::CHAT_POST_MESSAGE, $configurations->getArray());
 
         $this->body = json_decode($response->getBody());
 
